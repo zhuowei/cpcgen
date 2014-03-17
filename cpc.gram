@@ -34,7 +34,13 @@ episodesynopsyslines ::= <episodesynopsysline> | <episodesynopsysline> <episodes
 
 episodesynopsysline ::= <episodedoing>. | <episodedoing> <avoidevil>. | <episodedoing>. <canavoidevil>?
 
-episodedoing ::= <juniors> <try> to <action> a <nerdnoun> while <character> <adverb> <action>s a <nerdnoun>
+episodedoing ::= <juniors> <try> to <action> a <nerdnoun> while <character> <adverb> <action>s a <nerdnoun> | <episodefiller>
+
+episodefiller ::= The club listens as <juniors> <explain> their <explainable> | Everybody agreed when <juniors> <explain> their <explainable>
+
+explain ::= explain | recounts | remembers | discusses | presents
+
+explainable ::= experience | idea | thought
 
 canavoidevil ::= Can <junior> <action> a <nerdnoun> <avoidevil>
 
@@ -48,4 +54,8 @@ times ::= <time> | <time> and <time>
 
 time ::= summer | winter | spring | fall | exams | midterms | <holiday>
 
-avoidevil ::= without <senior> noticing | before <senior> stops them | while avoiding <senior>
+evilsenior ::= <senior> | the <eviladj> <senior>
+
+eviladj ::= evil | mad | angry | crazy | insane
+
+avoidevil ::= without <evilsenior> noticing | before <evilsenior> stops them | while avoiding <evilsenior>

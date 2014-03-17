@@ -237,12 +237,52 @@ case 2:
 return '' + gen_episodedoing() + '. ' + gen_canavoidevil() + '?';
 }
 }
-//episodedoing ::= <juniors> <try> to <action> a <nerdnoun> while <character> <adverb> <action>s a <nerdnoun>
+//episodedoing ::= <juniors> <try> to <action> a <nerdnoun> while <character> <adverb> <action>s a <nerdnoun> | <episodefiller>
 function gen_episodedoing() {
-var choice = Math.floor(Math.random() * 1);
+var choice = Math.floor(Math.random() * 2);
 switch(choice) {
 case 0:
 return '' + gen_juniors() + ' ' + gen_try() + ' to ' + gen_action() + ' a ' + gen_nerdnoun() + ' while ' + gen_character() + ' ' + gen_adverb() + ' ' + gen_action() + 's a ' + gen_nerdnoun() + '';
+case 1:
+return '' + gen_episodefiller() + '';
+}
+}
+//episodefiller ::= The club listens as <juniors> <explain> their <explainable> | Everybody agreed when <juniors> <explain> their <explainable>
+function gen_episodefiller() {
+var choice = Math.floor(Math.random() * 2);
+switch(choice) {
+case 0:
+return 'The club listens as ' + gen_juniors() + ' ' + gen_explain() + ' their ' + gen_explainable() + '';
+case 1:
+return 'Everybody agreed when ' + gen_juniors() + ' ' + gen_explain() + ' their ' + gen_explainable() + '';
+}
+}
+//explain ::= explain | recounts | remembers | discusses | presents
+function gen_explain() {
+var choice = Math.floor(Math.random() * 5);
+switch(choice) {
+case 0:
+return 'explain';
+case 1:
+return 'recounts';
+case 2:
+return 'remembers';
+case 3:
+return 'discusses';
+case 4:
+return 'presents';
+}
+}
+//explainable ::= experience | idea | thought
+function gen_explainable() {
+var choice = Math.floor(Math.random() * 3);
+switch(choice) {
+case 0:
+return 'experience';
+case 1:
+return 'idea';
+case 2:
+return 'thought';
 }
 }
 //canavoidevil ::= Can <junior> <action> a <nerdnoun> <avoidevil>
@@ -329,16 +369,42 @@ case 6:
 return '' + gen_holiday() + '';
 }
 }
-//avoidevil ::= without <senior> noticing | before <senior> stops them | while avoiding <senior>
+//evilsenior ::= <senior> | the <eviladj> <senior>
+function gen_evilsenior() {
+var choice = Math.floor(Math.random() * 2);
+switch(choice) {
+case 0:
+return '' + gen_senior() + '';
+case 1:
+return 'the ' + gen_eviladj() + ' ' + gen_senior() + '';
+}
+}
+//eviladj ::= evil | mad | angry | crazy | insane
+function gen_eviladj() {
+var choice = Math.floor(Math.random() * 5);
+switch(choice) {
+case 0:
+return 'evil';
+case 1:
+return 'mad';
+case 2:
+return 'angry';
+case 3:
+return 'crazy';
+case 4:
+return 'insane';
+}
+}
+//avoidevil ::= without <evilsenior> noticing | before <evilsenior> stops them | while avoiding <evilsenior>
 function gen_avoidevil() {
 var choice = Math.floor(Math.random() * 3);
 switch(choice) {
 case 0:
-return 'without ' + gen_senior() + ' noticing';
+return 'without ' + gen_evilsenior() + ' noticing';
 case 1:
-return 'before ' + gen_senior() + ' stops them';
+return 'before ' + gen_evilsenior() + ' stops them';
 case 2:
-return 'while avoiding ' + gen_senior() + '';
+return 'while avoiding ' + gen_evilsenior() + '';
 }
 }
 return gen_episode();
