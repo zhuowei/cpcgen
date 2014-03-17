@@ -1,14 +1,15 @@
 episode ::= <episodetitle>: <episodesynopsys>
 
-episodetitle ::= <character>'s <emotion> | What would <character> <actionshort>?
+episodetitle ::= <character>'s <emotion> | What would <character> <actionshort>? | <characterortitle> <noticed> my <nerdnoun>! | The <emotion> of <character>
+		| <holiday> Special
 
 actionshort ::= do | say | think
 
 character ::= <junior> | <senior>
 
-junior ::= Mispy | Cath | Demize
+junior ::= Mispy | Cath | Demize | Shuffles | Ael | Emi
 
-senior ::= Oh-Ex | Yuki | Rich
+senior ::= Oh-Ex | Yuki | Rich | Bob | Foxadon
 
 juniors ::= <junior> and <junior> | <junior>, <junior> and <junior>
 
@@ -22,4 +23,16 @@ action ::= install | format | hack | modify | reverse engineer | improve | learn
 
 adverb ::= quietly | quickly | angrily | repeatedly
 
-episodesynopsys ::= <juniors> <try> to <action> a <nerdnoun> while <character> <adverb> <action> a <nerdnoun>
+episodesynopsys ::= <episodedoing> | <timeblurb>, <episodedoing>
+
+episodedoing ::= <juniors> <try> to <action> a <nerdnoun> while <character> <adverb> <action>s a <nerdnoun>
+
+holiday ::= Easter | Christmas | Festivus | Pi day | Tau day | New year | Thanksgiving | <junior>'s birthday | Winter-een-mas
+
+timeblurb ::= With <times> <looming> | Now that <times> is on the horizon | Since <time> is coming up
+
+looming ::= looming | approaching
+
+times ::= <time> | <time> and <time>
+
+time ::= summer | winter | spring | fall | exams | midterms | <holiday>
