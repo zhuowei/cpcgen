@@ -1,3 +1,4 @@
+import sys
 def compileCFG(data, outfile):
 	print("function generateSentence() {", file=outfile)
 	# for each data bit, parse
@@ -63,6 +64,6 @@ def processChoice(choice):
 		choice = bracketRem[bracketOut + 1:]
 	return outstr + "'"
 
-with open("thm.gram", "r") as infile, open("thm.txt", "w") as outfile:
+with open(sys.argv[1], "r") as infile, open(sys.argv[2], "w") as outfile:
 	data = infile.read()
 	compileCFG(data, outfile)

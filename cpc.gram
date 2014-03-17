@@ -1,0 +1,25 @@
+episode ::= <episodetitle>: <episodesynopsys>
+
+episodetitle ::= <character>'s <emotion> | What would <character> <actionshort>?
+
+actionshort ::= do | say | think
+
+character ::= <junior> | <senior>
+
+junior ::= Mispy | Cath | Demize
+
+senior ::= Oh-Ex | Yuki | Rich
+
+juniors ::= <junior> and <junior> | <junior>, <junior> and <junior>
+
+emotion ::= wrath | sadness | pain | confusion | anger
+
+try ::= try | attempt
+
+nerdnoun ::= smartphone | computer | code | compiler | kernel | cellphone | hard drive | network | router | Wi-Fi | firmware
+
+action ::= install | format | hack | modify | reverse engineer | improve | learn about
+
+adverb ::= quietly | quickly | angrily | repeatedly
+
+episodesynopsys ::= <juniors> <try> to <action> a <nerdnoun> while <character> <adverb> <action> a <nerdnoun>

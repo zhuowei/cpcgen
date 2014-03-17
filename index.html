@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HackCPC generator</title>
+</head>
+<body>
+<div id="generated-text"></div>
+<div><button id="another-one-button" onclick="anotherOne()">Another!</button></div>
+<script type="text/javascript" src="cpc.js"></script>
+<script type="text/javascript">
+var generatedTextDiv;
+function anotherOne() {
+	generatedTextDiv.textContent = generateSentence();
+}
+generatedTextDiv = document.getElementById("generated-text");
+anotherOne();
+</script>
+</body>
+</html>
