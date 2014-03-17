@@ -59,3 +59,4 @@ evilsenior ::= <senior> | the <eviladj> <senior>
 eviladj ::= evil | mad | angry | crazy | insane
 
 avoidevil ::= without <evilsenior> noticing | before <evilsenior> stops them | while avoiding <evilsenior>
+	| before <evilsenior> stops them with a <eviladj> <nerdnoun>

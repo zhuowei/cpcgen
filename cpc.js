@@ -395,9 +395,9 @@ case 4:
 return 'insane';
 }
 }
-//avoidevil ::= without <evilsenior> noticing | before <evilsenior> stops them | while avoiding <evilsenior>
+//avoidevil ::= without <evilsenior> noticing | before <evilsenior> stops them | while avoiding <evilsenior>| before <evilsenior> stops them with a <eviladj> <nerdnoun>
 function gen_avoidevil() {
-var choice = Math.floor(Math.random() * 3);
+var choice = Math.floor(Math.random() * 4);
 switch(choice) {
 case 0:
 return 'without ' + gen_evilsenior() + ' noticing';
@@ -405,6 +405,8 @@ case 1:
 return 'before ' + gen_evilsenior() + ' stops them';
 case 2:
 return 'while avoiding ' + gen_evilsenior() + '';
+case 3:
+return 'before ' + gen_evilsenior() + ' stops them with a ' + gen_eviladj() + ' ' + gen_nerdnoun() + '';
 }
 }
 return gen_episode();
