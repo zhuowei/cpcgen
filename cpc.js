@@ -45,6 +45,32 @@ case 1:
 return '' + gen_senior() + '';
 }
 }
+//characterortitle ::= <character> | senpai
+function gen_characterortitle() {
+var choice = Math.floor(Math.random() * 2);
+switch(choice) {
+case 0:
+return '' + gen_character() + '';
+case 1:
+return 'senpai';
+}
+}
+//noticed ::= noticed | found | liked | hated | stole
+function gen_noticed() {
+var choice = Math.floor(Math.random() * 5);
+switch(choice) {
+case 0:
+return 'noticed';
+case 1:
+return 'found';
+case 2:
+return 'liked';
+case 3:
+return 'hated';
+case 4:
+return 'stole';
+}
+}
 //junior ::= Mispy | Cath | Demize | Shuffles | Ael | Emi
 function gen_junior() {
 var choice = Math.floor(Math.random() * 6);
@@ -177,14 +203,38 @@ case 3:
 return 'repeatedly';
 }
 }
-//episodesynopsys ::= <episodedoing> | <timeblurb>, <episodedoing>
+//episodesynopsys ::= <timeblurb>, <episodesynopsyslines> | <episodesynopsyslines>
 function gen_episodesynopsys() {
 var choice = Math.floor(Math.random() * 2);
 switch(choice) {
 case 0:
-return '' + gen_episodedoing() + '';
+return '' + gen_timeblurb() + ', ' + gen_episodesynopsyslines() + '';
 case 1:
-return '' + gen_timeblurb() + ', ' + gen_episodedoing() + '';
+return '' + gen_episodesynopsyslines() + '';
+}
+}
+//episodesynopsyslines ::= <episodesynopsysline> | <episodesynopsysline> <episodesynopsysline> |<episodesynopsysline> <episodesynopsysline> <episodesynopsysline>
+function gen_episodesynopsyslines() {
+var choice = Math.floor(Math.random() * 3);
+switch(choice) {
+case 0:
+return '' + gen_episodesynopsysline() + '';
+case 1:
+return '' + gen_episodesynopsysline() + ' ' + gen_episodesynopsysline() + '';
+case 2:
+return '' + gen_episodesynopsysline() + ' ' + gen_episodesynopsysline() + ' ' + gen_episodesynopsysline() + '';
+}
+}
+//episodesynopsysline ::= <episodedoing>. | <episodedoing> <avoidevil>. | <episodedoing>. <canavoidevil>?
+function gen_episodesynopsysline() {
+var choice = Math.floor(Math.random() * 3);
+switch(choice) {
+case 0:
+return '' + gen_episodedoing() + '.';
+case 1:
+return '' + gen_episodedoing() + ' ' + gen_avoidevil() + '.';
+case 2:
+return '' + gen_episodedoing() + '. ' + gen_canavoidevil() + '?';
 }
 }
 //episodedoing ::= <juniors> <try> to <action> a <nerdnoun> while <character> <adverb> <action>s a <nerdnoun>
@@ -193,6 +243,14 @@ var choice = Math.floor(Math.random() * 1);
 switch(choice) {
 case 0:
 return '' + gen_juniors() + ' ' + gen_try() + ' to ' + gen_action() + ' a ' + gen_nerdnoun() + ' while ' + gen_character() + ' ' + gen_adverb() + ' ' + gen_action() + 's a ' + gen_nerdnoun() + '';
+}
+}
+//canavoidevil ::= Can <junior> <action> a <nerdnoun> <avoidevil>
+function gen_canavoidevil() {
+var choice = Math.floor(Math.random() * 1);
+switch(choice) {
+case 0:
+return 'Can ' + gen_junior() + ' ' + gen_action() + ' a ' + gen_nerdnoun() + ' ' + gen_avoidevil() + '';
 }
 }
 //holiday ::= Easter | Christmas | Festivus | Pi day | Tau day | New year | Thanksgiving | <junior>'s birthday | Winter-een-mas
@@ -269,6 +327,18 @@ case 5:
 return 'midterms';
 case 6:
 return '' + gen_holiday() + '';
+}
+}
+//avoidevil ::= without <senior> noticing | before <senior> stops them | while avoiding <senior>
+function gen_avoidevil() {
+var choice = Math.floor(Math.random() * 3);
+switch(choice) {
+case 0:
+return 'without ' + gen_senior() + ' noticing';
+case 1:
+return 'before ' + gen_senior() + ' stops them';
+case 2:
+return 'while avoiding ' + gen_senior() + '';
 }
 }
 return gen_episode();

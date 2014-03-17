@@ -7,6 +7,10 @@ actionshort ::= do | say | think
 
 character ::= <junior> | <senior>
 
+characterortitle ::= <character> | senpai
+
+noticed ::= noticed | found | liked | hated | stole
+
 junior ::= Mispy | Cath | Demize | Shuffles | Ael | Emi
 
 senior ::= Oh-Ex | Yuki | Rich | Bob | Foxadon
@@ -23,9 +27,16 @@ action ::= install | format | hack | modify | reverse engineer | improve | learn
 
 adverb ::= quietly | quickly | angrily | repeatedly
 
-episodesynopsys ::= <episodedoing> | <timeblurb>, <episodedoing>
+episodesynopsys ::= <timeblurb>, <episodesynopsyslines> | <episodesynopsyslines>
+
+episodesynopsyslines ::= <episodesynopsysline> | <episodesynopsysline> <episodesynopsysline> |
+			<episodesynopsysline> <episodesynopsysline> <episodesynopsysline>
+
+episodesynopsysline ::= <episodedoing>. | <episodedoing> <avoidevil>. | <episodedoing>. <canavoidevil>?
 
 episodedoing ::= <juniors> <try> to <action> a <nerdnoun> while <character> <adverb> <action>s a <nerdnoun>
+
+canavoidevil ::= Can <junior> <action> a <nerdnoun> <avoidevil>
 
 holiday ::= Easter | Christmas | Festivus | Pi day | Tau day | New year | Thanksgiving | <junior>'s birthday | Winter-een-mas
 
@@ -36,3 +47,5 @@ looming ::= looming | approaching
 times ::= <time> | <time> and <time>
 
 time ::= summer | winter | spring | fall | exams | midterms | <holiday>
+
+avoidevil ::= without <senior> noticing | before <senior> stops them | while avoiding <senior>
