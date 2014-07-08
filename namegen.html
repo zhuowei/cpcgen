@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aspects name generator</title>
+</head>
+<body>
+<div><button id="another-one-button" onclick="anotherOne()">Another!</button></div>
+<div id="generated-text"></div>
+<script type="text/javascript" src="namegen.js"></script>
+<script type="text/javascript">
+var generatedTextDiv;
+function anotherOne() {
+	generatedTextDiv.innerHTML += generateSentence() + "<br>";
+}
+generatedTextDiv = document.getElementById("generated-text");
+anotherOne();
+</script>
+</body>
+</html>

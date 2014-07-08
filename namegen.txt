@@ -1,0 +1,36 @@
+character ::= <characterregular> | <characterregular> | <characterregular> | <characterregular>, forged from <characterregular> by <nameeastern>
+
+characterregular ::= <name>, <relationship>
+
+relationship ::= <familyrel> of <name>
+
+familyrel ::= cousin | <randomnumber> cousin | brother | sister | mother | father | son | daughter | husband | wife
+
+randomnumber ::= first | second | third
+
+name ::= <namewestern> | <nameeastern>
+
+namewestern ::= <firstname> <lastname>
+
+firstname ::= <firstnamepart1><firstnamepart2>
+
+firstnamepart1 ::= Ism | He | Brada | Eras | Luz | Rodo | Flu | Dia
+
+firstnamepart2 ::= yrn | len | ment | min | crezo | mond | ens | dem
+
+lastname ::= <lastnamepart1><lastnamepart2>
+
+lastnamepart1 ::= Gale | Vera | Gra | Arcoce | Core
+lastnamepart2 ::= tti | ldo | nito | lli | ll
+
+nameeastern ::= <easternfirst> of <place>
+
+place ::= <placepart1><placepart2>
+
+placepart1 ::= Ant | Toh | Chal | Solo | Lyu | Zarra
+placepart2 ::= aram | kar | d | ranin | kemo | nask
+
+easternfirst ::= <easternfirst1><easternfirst2>
+
+easternfirst1 ::= Kata | Hou | Bars | Ha | Ara | Marz | Yas | Re | Ara
+easternfirst2 ::= rosi | ri | amin | yr | maz | ban | min | han | kel
